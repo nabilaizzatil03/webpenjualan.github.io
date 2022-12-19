@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css.css">
+    <title>Girls-time</title>
+    <style>
+     * {
+         margin:0px; 
+         padding:0;
+     }
+ 
+    nav {
+        margin:auto;
+        text-align: center;
+        width: 100%;
+        font-family: 'DM Serif Display', serif;
+    } 
+    
+    nav ul {
+        background:#f8b0d2;
+        padding: 0 10px;
+        list-style: none;
+        position: relative;
+        display: inline-table;
+        width: 100%;
+     }
+
+    nav ul li{
+        float:left;
+    }
+
+    nav ul li:hover{
+        background:#d68d9a;
+    }
+
+    nav ul li:hover a{
+     	color:#000;
+    }
+
+    nav ul li a{
+     	display: block;
+     	padding: 25px;
+     	color: #000;
+     	text-decoration: none;
+    }
+
+    .fa-shopping-cart {
+        margin-right: 50px;
+        margin-top: 17,5px;
+    }
+
+    </style>
+
+</head>
+<body>
+  
+  <nav>
+    <ul>
+       <img src="logo.jpg" class="square mb-3"
+       style="height : 2cm" align="left">
+      <li><a href="index.html">Home</a></li>
+     <li class="dropdown"><a href="#">Kain Batik</a>
+       <ul class="isi-dropdown">
+        <li><a href="batik_sutra.html">Kain Sutra</a></li>
+       <li><a href="batik_rok.html">Kain Batik Rok</a></li>
+       <li><a href="batik_kemeja.html">Kain Batik Kemeja</a></li>
+       <li><a href="sintetis.html">Kain Sintetis</a></li>
+       <li><a href="tulis.html">Kain Batik Tulis</a></li>
+       </ul></li>
+       <li class="dropdown"><a href="#">Kemeja jadi</a>
+       <ul class="isi-dropdown">
+       <li><a href="hem_S.html">Ukuran S</a></li>
+       <li><a href="hem_M.html">Ukuran M</a></li>
+       <li><a href="hem_L.html">Ukuran L</a></li>
+       <li><a href="hem_XL.html">Ukuran XL</a></li>
+       </ul>
+       </li>
+       <li><a href="kain_sarimbit.html">Kain Sarimbit</a></li>
+       <li><a href="sasirangan.html">Batik Sasirangan</a></li>
+       <li><a href="tenun.html">Batik Tenun</a></li>
+    </ul>
+</nav>
+
+<br>
+<br>
+<br>
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="bg (1).jpeg" style="width:100%">
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="bg (2).jpeg" style="width:100%">
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="bg.jpeg" style="width:100%">
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+    
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+    
+    <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+
+
+<h1>Rekomendasi</h1>
+<div class="kategori">
+<div class="batik">
+    <a target="_blank" href="img/sutra1 (1).jpeg">
+      <img src="img/sutra1 (1).jpeg" style="height: 318px; width: 365px;">
+    </a>
+    <div class="caption">Batik sutra tulis 2 meter</div>
+    <center><a href="sutra1.html"><button class="button button3">Lihat Produk</button></center></a>
+    </div>
+</div>
+
+<div class="kategori">
+  <div class="batik">
+    <a target="_blank" href="img/sutra1 (2).jpeg">
+      <img src="img/sutra1 (2).jpeg" style="height: 318px; width: 365px;">
+    </a>
+    <div class="caption">Batik sutra tulis bisa untuk sarimbit</div>
+    <center><a href="sutra2.html"><button class="button button3">Lihat Produk</button></center></a>
+    </div>
+</div>
+
+<div class="kategori">
+  <div class="batik">
+    <a target="_blank" href="img/kain batik rok (3).jpeg">
+      <img src="img/kain batik rok (3).jpeg" style="height: 318px; width: 365px;">
+    </a>
+    <div class="caption">kain batik untuk rok lilit tulis</div>
+    <center><a href="rok_lilit1.html"><button class="button button3">Lihat Produk</button></center></a>
+    </div>
+</div>
+
+<div class="kategori">
+  <div class="batik">
+    <a target="_blank" href="img/kain batik rok (2).jpeg">
+      <img src="img/kain batik rok (2).jpeg" style="height: 318px; width: 365px;">
+    </a>
+    <div class="caption">kain batik untuk dibuat rok kondangan</div>
+    <center><a href="rok_lilit2.html"><button class="button button3">Lihat Produk</button></center></a>
+    </div>
+</div>
+
+<div class="kategori">
+  <div class="batik">
+    <a target="_blank" href="img/bahan batik kemeja (1).jpeg">
+      <img src="img/bahan batik kemeja (1).jpeg" style="height: 400px; width: 365px;">
+    </a>
+    <div class="caption">bahan / kain untuk kemeja dan hem</div>
+    <center><a href="kain_hem.html"><button class="button button3">Lihat Produk</button></center></a>
+    </div>
+</div>
+
+<div class="kategori">
+  <div class="batik">
+    <a target="_blank" href="img/kain jarik (1).jpeg">
+      <img src="img/kain jarik (1).jpeg" style="height: 400px; width: 365px;">
+    </a>
+    <div class="caption">kain jarik cocok untuk wisuda</div>
+    <center><a href="jarik1.html"><button class="button button3">Lihat Produk</button></center></a>
+    </div>
+</div>
+
+<div class="kategori">
+  <div class="batik">
+    <a target="_blank" href="img/batik sarimbit (3).jpeg">
+      <img src="img/batik sarimbit (3).jpeg" style="height: 400px; width: 365px;">
+    </a>
+    <div class="caption">kain batik untuk sarimbit couple</div>
+    <center><a href="sarimbit1.html"><button class="button button3">Lihat Produk</button></center></a>
+    </div>
+</div>
+
+
+<div class="kategori">
+  <div class="batik">
+    <a target="_blank" href="img/batik sarimbit (1).jpeg">
+      <img src="img/batik sarimbit (1).jpeg" style="height: 400px; width: 365px;">
+    </a>
+    <div class="caption">kain batik yang cocok dibuat sarimbit</div>
+    <center><a href="sarimbit2.html"><button class="button button3">Lihat Produk</button></center></a>
+    </div>
+</div>
+</div>
+
+<center><h2>Tentang Kami</h2></center>
+<p4>Hallo semuanya, web ini dibuat oleh Nabila Izzatil Ismah, sherylin Nicole Gunawan, dan Agnestia go,
+website ini bertujuan untuk menjual beberapa jenis batik yang anda butuhkan, apabila membutuhkan bantuan berupa tutorial memakai website ini dan membeli suatu barang atau mungkin ada error pada website ini silahkan contact dibawah ini</p4>
+
+<center><a href="https://wa.me/6281229984124?text=Hallo%20mau%20tanya%20apa?%20nabila%20disini :)" class="tombol_contact_us"><img src="wa1.png"></a></center>
+<center><a href="https://www.instagram.com//nabilaizzatil03/" class="tombol_ig"><img src="instagram.png"></a></center>
+
+
+
+
+</body>
+</html>

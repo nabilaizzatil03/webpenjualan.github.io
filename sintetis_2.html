@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css.css">
+    <title>Girls-time</title>
+    <style>
+     * {
+         margin:0px; 
+         padding:0;
+     }
+ 
+    nav {
+        margin:auto;
+        text-align: center;
+        width: 100%;
+        font-family: 'DM Serif Display', serif;
+    } 
+    
+    nav ul {
+        background:#f8b0d2;
+        padding: 0 10px;
+        list-style: none;
+        position: relative;
+        display: inline-table;
+        width: 100%;
+     }
+
+    nav ul li{
+        float:left;
+    }
+
+    nav ul li:hover{
+        background:#d68d9a;
+    }
+
+    nav ul li:hover a{
+     	color:#000;
+    }
+
+    nav ul li a{
+     	display: block;
+     	padding: 25px;
+     	color: #000;
+     	text-decoration: none;
+    }
+     
+    </style>
+
+</head>
+<body>
+  <nav>
+    <ul>
+       <img src="logo.jpg" class="square mb-3"
+       style="height : 2cm" align="left">
+      <li><a href="index.html">Home</a></li>
+     <li class="dropdown"><a href="#">Kain Batik</a>
+       <ul class="isi-dropdown">
+        <li><a href="batik_sutra.html">Kain Sutra</a></li>
+       <li><a href="batik_rok.html">Kain Batik Rok</a></li>
+       <li><a href="batik_kemeja.html">Kain Batik Kemeja</a></li>
+       <li><a href="sintetis.html">Kain Sintetis</a></li>
+       <li><a href="tulis.html">Kain Batik Tulis</a></li>
+       </ul></li>
+       <li class="dropdown"><a href="#">Kemeja jadi</a>
+       <ul class="isi-dropdown">
+       <li><a href="hem_S.html">Ukuran S</a></li>
+       <li><a href="hem_M.html">Ukuran M</a></li>
+       <li><a href="hem_L.html">Ukuran L</a></li>
+       <li><a href="hem_XL.html">Ukuran XL</a></li>
+       </ul>
+       </li>
+       <li><a href="kain_sarimbit.html">Kain Sarimbit</a></li>
+       <li><a href="sasirangan.html">Batik Sasirangan</a></li>
+       <li><a href="tenun.html">Batik Tenun</a></li>
+    </ul>
+</nav>
+
+
+<div class="container">
+        <div class="box">
+          <a target="_blank" href="sintetis (2).jpeg" style="text-decoration: none;">
+            <img src="sintetis (2).jpeg" style="height: 400px; width: 365px;">
+          </a>
+          <input id="id_sintetis_1" type="hidden" value="1">
+          <div class="caption1">Kain batik berbahan sintetis<br>
+            <p3>semua bahan maupun baju dari toko kami dijamin sesuai bahkan lebih baik dari fotonya<br>kain ini sangat cocok digunakan untuk dibuat menjadi selendang atau kerudung<br> kain ini termasuk kain yang pembuatannya menggunakan model printing</p3>
+            <center><p><s>Rp.420.000 / meter</s>   Rp.382.000 / meter</p></center>
+            <i class='fa fa-truck'></i>Gratis Ongkir* <br>
+            <p2>*) Pengiriman khusus wilayah Semarang, Pekalongan dan sekitarnya</p2>
+          </div>
+          <div class="number">
+            <span class="minus" onclick="minus()">-</span>
+            <input id="testing" class="testing" type="text" value="1" />
+            <span class="plus" onclick="plus()">+</span> 
+            <center><button onclick="test()">SUBMIT</button></center>
+          </div>
+          <center>
+            <div class="alamat-sederhana">
+              <label for="lokasi">Lokasi anda :</label>
+              <select name="lokasi" id="lokasi">
+                <option value="Jawa">Jawa</option>
+                <option value="Sumatra">Sumatra</option>
+                <option value="Sulawesi">Sulawesi</option>
+                <option value="Papua">Papua</option>
+                <option value="Kalimantan">Kalimantan</option>
+              </select>
+            </div>
+            </center>
+            <script>
+              let tempValue = document.getElementById("testing").value;
+ 
+ let arrBarang = [
+   {
+     id: 1,
+     nama: "batik sintetis 2",
+     harga: 382000,
+   },
+ ];
+ 
+ function formatRupiah(angka, prefix) {
+   let number_string = angka.replace(/[^,\d]/g, "").toString(),
+     split = number_string.split(","),
+     sisa = split[0].length % 3,
+     rupiah = split[0].substr(0, sisa),
+     ribuan = split[0].substr(sisa).match(/\d{3}/gi);
+ 
+   // tambahkan titik jika yang di input sudah menjadi angka ribuan
+   if (ribuan) {
+     separator = sisa ? "." : "";
+     rupiah += separator + ribuan.join(".");
+   }
+ 
+   rupiah = split[1] != undefined ? rupiah + "," + split[1] : rupiah;
+   if (prefix == undefined) {
+     return "Rp. " + rupiah + ",00";
+   } else {
+     return prefix + rupiah + ",00";
+   }
+ }
+ 
+ 
+ function test() {
+   let id_sintetis_2 = Number(document.getElementById("id_sintetis_2").value);
+   let lokasiValue = document.getElementById("lokasi").value;
+ 
+   console.log("ini total barang", tempValue);
+   if (tempValue < 10) {
+     alert("Minimal pembelian harus diatas 10");
+   } else {
+     //     alert(
+     //       `Anda memesan kain batik sebanyak : ${tempValue}
+     // Anda berlokasi di ${lokasiValue}, ongkir anda sebesar Rp.10.000,00
+ 
+     // Total biaya yang anda bayar + ongkir senilai :
+ 
+     // silahkan klik tombol "pesan via whatsApp"
+     //     `
+     //     );
+     // pengambilang nama barang
+     let hargaBarang = 0;
+     for (let i = 0; i < arrBarang.length; i++) {
+       if (id_sintetis_2 === arrBarang[i].id) {
+         // console.log(arrBarang[i].harga);
+         hargaBarang = arrBarang[i].harga;
+         break;
+   }
+ }
+ console.log(hargaBarang);
+ let strOngkir = "";
+ let ongkir = 0;
+ 
+ if (lokasiValue === "Jawa") {
+   ongkir = 0;
+   strOngkir = "gratis";
+ } else if (lokasiValue === "Sumatra") {
+   ongkir = 10000;
+   strOngkir = "sebesar Rp.10.000,00";
+ } else if (lokasiValue === "Sulawesi") {
+   ongkir = 20000;
+   strOngkir = "sebesar Rp.20.000,00";
+ } else if (lokasiValue === "Kalimantan") {
+   ongkir = 30000;
+   strOngkir = "sebesar Rp.30.000,00";
+ } else {
+   ongkir = 40000;
+   strOngkir = "sebesar Rp.40.000,00";
+ }
+ 
+ alert(
+   `Anda memesan kain batik sebanyak : ${tempValue}
+ Anda berlokasi di ${lokasiValue}, ongkir anda ${strOngkir}
+ 
+ Total biaya yang anda bayar + ongkir senilai : ${formatRupiah(String(hargaBarang * tempValue + ongkir), "Rp.")}
+ 
+ silahkan klik tombol "pesan via whatsApp"
+     `
+ );
+ }
+ }
+ 
+ function minus() {
+   if (tempValue > 0) {
+     console.log("ini jalan minus", tempValue);
+     tempValue--;
+   }
+   document.getElementById("testing").value = tempValue;
+ }
+ function plus() {
+   console.log("ini jalan plus", tempValue);
+   tempValue++;
+   document.getElementById("testing").value = tempValue;
+ }
+ 
+ </script>
+
+          <script src="./js.js"></script>
+          <center><a href="https://wa.me/6281229984124?text=Hallo%20mau%20tanya%20apa?%20nabila%20disini :)"><button class="button button3">Pesan via WhatsApp</a></center>
+            <a href="sintetis.html"><button class="button button3">Kembali</button></a>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
